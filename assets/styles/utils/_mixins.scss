@@ -1,0 +1,13 @@
+@mixin test {
+  color: red;
+}
+
+@mixin hover ($property, $value) {
+  & {
+    transition: #{$property} ease-in $transition-duration;
+  }
+
+  &:hover {
+    #{$property}: #{$value}
+  }
+}

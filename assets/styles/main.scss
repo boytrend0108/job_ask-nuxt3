@@ -1,0 +1,17 @@
+html {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  color: $color-bg;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 100px;
+  box-sizing: border-box;
+}
