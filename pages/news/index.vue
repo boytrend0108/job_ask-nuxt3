@@ -13,6 +13,13 @@
 <script setup>
   import { API }from '~/constants/constants.js'
   const { data: news } = useFetch(API)
+
+  useHead({
+    title: "Свежие новости",
+    meta: [
+      {name: 'description', content: 'Наши новости'}
+    ]
+  })
 </script>
 
 <style lang="scss" scoped>

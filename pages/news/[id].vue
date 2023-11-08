@@ -1,6 +1,10 @@
 <template>
   <div>
-    <NewsItem :news="news"/>
+    <Head>
+      <Title>Новость дня</Title>
+      <Meta name="description" :content="news.description"/>
+      <NewsItem :news="news"/>
+    </Head>
   </div>
 </template>
 
@@ -10,6 +14,14 @@
   const uri = API +  `/${id}`
 
   const {data: news} = await useFetch(uri, {key: id})
+
+  if (!news.value) {
+    throw createError({
+      statusCode: 404, 
+      statusMessage: 'News not found',
+      fatal: true,
+    })
+  }
 </script>
 
 <style lang="scss" scoped>

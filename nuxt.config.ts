@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },  
   app: {
     head: {
+      title: 'JobAsk',
+      meta: [
+        { name: 'desctiption', content: 'Визы в Европу' },
+
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com'},
         { rel: 'preconnect', href: 'https://fonts.gstatic.com'},
