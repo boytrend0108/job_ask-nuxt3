@@ -5,7 +5,7 @@
         <h1 class="error__title">{{ error.statusCode }}</h1>
         <h2 class="error__subtitle"> Ooops...</h2>
         <p class="error__text">{{ error.message }}</p>
-        <MyButton @click="clickHandler">Go Home...</MyButton>
+        <UIMyButton @click="clickHandler">Go Home...</UIMyButton>
       </div>
     </div>
   </div>

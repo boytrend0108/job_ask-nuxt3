@@ -3,8 +3,9 @@
     <Head>
       <Title>Новость дня</Title>
       <Meta name="description" :content="news.description"/>
-      <NewsItem :news="news"/>
     </Head>
+    <NewsItem :news="news"/>
+    <p>{{ $route.params.id }}</p>
   </div>
 </template>
 
@@ -12,6 +13,9 @@
   import { API } from '~/constants/constants.js'
   const { id } = useRoute().params
   const uri = API +  `/${id}`
+
+  const config = useAppConfig()
+  console.log(config)
 
   const {data: news} = await useFetch(uri, {key: id})
 
