@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="home">
-      <div class="home__header header">
+      <div class="home__header header" id="top">
         <div class="container">
           <div class="top-bar home__top-bar">
             <NuxtLink to="/">
@@ -84,13 +84,35 @@
             </a>
            </div>
         </div>
-        <div class="footer__copy"></div>
+
+        <div class="footer__copy">
+          <p class="footer__copyright">© copyright 2023 by 
+            <NuxtLink to="/" class="footer__copylink">jobask.ru</NuxtLink>
+          </p>
+        </div>
       </div>
     </footer>
+
+    <UIUpButton  v-if="scrollButton"/>
   </div>
 </template>
 
 <script setup>
+
+  const scrollButton = ref(true)
+
+  const showScrollButton = () => { 
+    if (window.scrollY > 300) {
+      scrollButton.value = true
+    } else {
+      return scrollButton.value = false
+    }
+    
+  }
+
+  onMounted(() => {
+    window.addEventListener('scroll', showScrollButton)
+  })
 
 </script>
 
@@ -173,6 +195,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 60px;
+      margin-bottom: 20px;
     }
 
     &__title {
@@ -206,14 +229,43 @@
         &--#{$icon} {
 
           &::before {
-            content: url(../assets/icons/#{$icon}.svg);
+            content: url(~/assets/images/icons/#{$icon}.svg);
           }
 
           &:hover::before {
-            content: url(../assets/icons/#{$icon}-hover.svg);
+            content: url(~/assets/images/icons/#{$icon}-hover.svg);
           }
         }
       }
+    }
+
+    &__copyright {
+      font-family: "Barlow", serif;
+      font-size: 16px;
+      justify-content: center;
+      display: flex;
+      padding-block: 30px;
+      box-sizing: border-box;
+      position: relative;
+      color: #a6b3d0;
+
+      &::before {
+        content: '';
+        width: 100%;
+        max-width: 1170px;
+        height: 5px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__copylink {
+      color: #fff;
+      margin-left: 10px;
     }
   }
 

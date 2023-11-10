@@ -6,7 +6,7 @@
       </li>
       <li class="nav__item nav__item--vng">
         <NuxtLink to="/resident" class="nav__link">ВНЖ</NuxtLink>
-        <div class="nav__dropdown">
+        <div class="nav__dropdown" v-if="$route.path !== '/resident'">
           <NuxtLink to="/resident#slovakii" class="nav__drop-item">Словакия</NuxtLink>
           <NuxtLink to="/resident#ch" class="nav__drop-item">Чехия</NuxtLink>
         </div>
@@ -31,6 +31,9 @@
   const underlineColor = direction === 'row' ? '#0c1a3c': '#7c859b'
   const underlineTop = direction === 'row' ? '60px': '25px'
   const menuWidth = direction === 'row' ? '400px': 'fit-content'
+
+  const route = useRoute();
+  console.log(route)
 </script>
 
 <style lang="scss" scoped>
