@@ -14,11 +14,9 @@
 
 <style lang="scss" scoped>
   .home {
-    &__first-screen {
-      margin-bottom: 120px;
-    }
-
-    &__offers {
+    &__first-screen,
+    &__offers,
+    &__form {
       margin-bottom: 120px;
     }
   }
