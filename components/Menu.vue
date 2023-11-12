@@ -33,7 +33,6 @@
   const menuWidth = direction === 'row' ? '400px': 'fit-content'
 
   const route = useRoute();
-  console.log(route)
 </script>
 
 <style lang="scss" scoped>

@@ -41,9 +41,14 @@
 
 <style lang="scss" scoped>
   .offer {
+    padding: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
+    box-shadow: 
+     0px 6px 47px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
 
     &__title {
       color: $color-font-dark;

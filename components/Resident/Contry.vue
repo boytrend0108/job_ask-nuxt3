@@ -38,6 +38,10 @@
     border-bottom: 1px solid #ccc;
     padding-bottom: 40px;
 
+    &:first-child {
+      padding-top: 60px;
+    }
+    
     &__title {
       margin-bottom: 30px;
       margin-top: 30px;
@@ -51,6 +55,7 @@
       overflow: hidden;
       width: 100%;
       margin-bottom: 20px;
+      border-radius: 10px;
     }
 
     &__img {

@@ -21,6 +21,6 @@ const {data: offers} = useFetch('/api/home')
   .offers {
      display: flex;
      flex-direction: column;
-     gap: 30px;
+     gap: 60px;
   }
 </style>

@@ -28,6 +28,7 @@
         class="form__textarea"
         placeholder="Интересующая услуга или вопрос"
         v-model="message"
+        rows="6"
       ></textarea>
 
       <UIWhiteButton class="form__btn">Отправить</UIWhiteButton>
@@ -81,11 +82,19 @@ const sendData = ({target:form}) => {
       background: #f0f1f8;
       padding: 0 20px;
       box-sizing: border-box;
+
+      &:focus {
+        outline: 1px solid $color-active;
+      }
     }
 
     &__textarea {
       resize: none;
       margin-bottom: 40px;
+      padding: 20px 20px;
+      height: 100px;
+
+      @include scrollBar;
     }
 
     &__btn {

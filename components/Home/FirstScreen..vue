@@ -3,14 +3,19 @@
     <div class="container">
       <h1 class="first-screen__title">
         Работа это просто.<br>
-        Европа Ждёт
+        Европа <span class="first-screen__typer"> {{ message }}</span>
       </h1>
     </div>
   </section>
 </template>
 
 <script setup>
+  import typeMessage from '~/plugins/typed'
 
+  const message = ref('')
+  const words = ['Ждёт ', 'Hанимает ']
+
+  typeMessage(words, message)
 </script>
 
 <style lang="scss" scoped>
@@ -28,5 +33,18 @@
       letter-spacing: -.02em;
       font-weight: 700;
     }
+
+    &__typer {
+      display: inline-block;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-top: 1px solid #1f5ad2;
+        border-bottom: 1px solid #1f5ad2;
+    }
   }
+}
 </style>
