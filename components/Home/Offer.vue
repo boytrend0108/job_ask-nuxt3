@@ -2,7 +2,9 @@
   <article class="offer">
     <div class="offer__description">
       <p class="offer__subtitle"> {{ offer.subtitle }}</p>
+
       <h2 class="offer__title">{{ offer.title }}</h2>
+
       <ul class="offer__list">
         <li 
           class="offer__item" 
@@ -29,7 +31,9 @@
         </ClientOnly>
         {{ offer.title_2 }}
       </h3>
+
       <p class="offer__text">Именно поэтому собрали всю информацию косательно виз в одном месте</p>
+
       <UIWhiteButton class="offer__btn">Узнать больше</UIWhiteButton>
     </div>
   </article>
@@ -50,13 +54,36 @@
     -webkit-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
 
+    @include onLaptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include onTablet {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @include onMobile {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    &__description {
+      @include onLaptop {
+        grid-column: 1/-1;
+        margin-bottom: 20px;
+      }
+    }
+
     &__title {
       color: $color-font-dark;
-      font-weight: 700;
-      font-size: 50px;
-      letter-spacing: -.02em;
       margin-bottom: 40px;
       width: 80%;
+      
+      @include onTablet {
+        margin-bottom: 25px;
+      }
     }
 
     &__item {
@@ -99,6 +126,11 @@
       gap: 10px;
       justify-content: space-between;
       align-items: center;
+
+      @include onTablet {
+        justify-content: start;
+        gap: 20px;
+      }
     }
 
     &__text {
@@ -112,11 +144,15 @@
     &__contact {
       background-color: $color-active;
       padding: 60px;
+
+      @include onTablet {
+        padding: 20px;
+      }
     }
 
     &__btn {
       background-color: #fff;
-      width: 100px;
+      width: fit-content;
     }
 
     &__icon {

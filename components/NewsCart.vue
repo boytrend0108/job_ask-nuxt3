@@ -11,7 +11,7 @@
         >
       </div>
       <h3 class="news-cart__subtitle">Новость дня</h3>
-      <h2 class="news-cart__title"> {{ item.title }}</h2>
+      <h3 class="news-cart__title"> {{ item.title }}</h3>
     </NuxtLink>
   </div>
 </template>
@@ -47,8 +47,6 @@
 
     &__title {
       color: $color-font-dark;
-      font-size: 21px;
-      line-height: 1.35;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;

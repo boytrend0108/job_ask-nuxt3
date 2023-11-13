@@ -60,3 +60,28 @@
     border-radius: 5px;
   }
 }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};  
+}
+ 
+@mixin onLaptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}

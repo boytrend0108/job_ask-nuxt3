@@ -24,6 +24,14 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      width: 100%;
+      border-radius: $border-radius;
+      transition: all ease-in $transition-duration;
+      
+      &:hover {
+        background-color: $color-active;
+        color: #fff;
+      }
    }
 
 </style>

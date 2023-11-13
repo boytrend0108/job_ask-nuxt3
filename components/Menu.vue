@@ -1,31 +1,32 @@
 <template>
-  <nav class="nav">
-    <ul class="nav__list">
-      <li class="nav__item">
-        <NuxtLink to="/" class="nav__link">Главная</NuxtLink>
+  <nav class='nav'>
+    <ul class='nav__list'>
+      <li class='nav__item'>
+        <NuxtLink to='/' class='nav__link'>Главная</NuxtLink>
       </li>
-      <li class="nav__item nav__item--vng">
-        <NuxtLink to="/resident" class="nav__link">ВНЖ</NuxtLink>
-        <div class="nav__dropdown" v-if="$route.path !== '/resident'">
-          <NuxtLink to="/resident#slovakii" class="nav__drop-item">Словакия</NuxtLink>
-          <NuxtLink to="/resident#ch" class="nav__drop-item">Чехия</NuxtLink>
+      <li class='nav__item nav__item--vng'>
+        <NuxtLink to='/resident' class='nav__link'>ВНЖ</NuxtLink>
+        <div class='nav__dropdown' v-if='showDropdown'>
+          <NuxtLink to='/resident#slovakii' class='nav__drop-item'>Словакия</NuxtLink>
+          <NuxtLink to='/resident#ch' class='nav__drop-item'>Чехия</NuxtLink>
         </div>
       </li>
-      <li class="nav__item">
-        <NuxtLink to="/work" class="nav__link">Работа</NuxtLink>
+      <li class='nav__item'>
+        <NuxtLink to='/work' class='nav__link'>Работа</NuxtLink>
       </li>
-      <li class="nav__item">
-        <NuxtLink to="/contact" class="nav__link">Контакты</NuxtLink>
+      <li class='nav__item'>
+        <NuxtLink to='/contact' class='nav__link'>Контакты</NuxtLink>
       </li>
-      <li class="nav__item">
-        <NuxtLink to="/news" class="nav__link">Hовости</NuxtLink>
+      <li class='nav__item'>
+        <NuxtLink to='/news' class='nav__link'>Hовости</NuxtLink>
       </li>
     </ul>
   </nav>
 </template>
 
 <script setup>
-  const { direction } = defineProps(['direction'])
+  const { direction, inFooter } = defineProps(['direction', 'inFooter'])
+
   const paddingBlock = direction === 'row' ? '40px': '5px'
   const linkColor = direction === 'row' ? '#0c1a3c': '#7c859b'
   const underlineColor = direction === 'row' ? '#0c1a3c': '#7c859b'
@@ -33,9 +34,22 @@
   const menuWidth = direction === 'row' ? '400px': 'fit-content'
 
   const route = useRoute();
+  const showDropdown = ref(false)
+
+  watch(() => route.name, () => {
+    if (route.name === 'resident' || inFooter) {
+      showDropdown.value = false
+      return
+    } 
+
+    showDropdown.value = true    
+    }, 
+    {deep: true, immediate: true}
+  )
+
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
  .nav {
     display: flex;
     justify-content: flex-start;

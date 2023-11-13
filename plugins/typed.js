@@ -5,6 +5,8 @@ const typeMessage = (words, elem) => {
   
     function typeLine() {
       let interval = setTimeout(() => {
+        if(!words[line]) return
+        
         out += words[line][count]
         elem.value = out + '|'
         count++

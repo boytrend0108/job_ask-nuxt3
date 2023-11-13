@@ -26,12 +26,12 @@
    justify-content: center;
    align-items: center;
 
+   @include onMobile {
+    height: 470px;
+   }
+
     &__title {
       color: #fff;
-      font-size: 80px;
-      line-height: 90px;
-      letter-spacing: -.02em;
-      font-weight: 700;
     }
 
     &__typer {

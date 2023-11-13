@@ -31,10 +31,19 @@
     column-gap: 20px;
     align-items: center;
     padding: 40px;
+    box-sizing: border-box;
     box-shadow: 
      0px 6px 47px -6px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
+
+    @include onMobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-shadow: none;
+      padding: 0;
+    }
 
     &__content {
       grid-column: 6/12;
@@ -71,8 +80,13 @@
       color: #fff;
       padding-left: 14px;
       padding-right: 14px;
+      box-sizing: border-box;
       width: 140px;
       border-radius: 10px;
+
+      @include onMobile {
+        width: 100%;
+      }
     }
 
     &__wr {

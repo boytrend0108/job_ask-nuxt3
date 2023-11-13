@@ -40,11 +40,9 @@
 
     &__title {
       margin-bottom: 40px;
-      font-size: 100px;
     }
     
     &__subtitle {
-      font-size: 40px;
       margin-bottom: 12px;
     }
 

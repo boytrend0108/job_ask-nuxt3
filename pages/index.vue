@@ -16,7 +16,11 @@
     &__first-screen,
     &__offers,
     &__form {
-      margin-bottom: 120px;
+      margin-bottom: $margin-section;
+
+      @include onMobile {
+        margin-bottom: $margin-section-mobile;
+      }
     }
   }
 

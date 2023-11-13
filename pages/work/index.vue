@@ -18,18 +18,17 @@
               :job="job"
             />
           </section>
-          <section class="work__form">
-            <HomeForm />
-          </section>
         </div>
+
+        <section class="work__form">
+          <HomeForm />
+        </section>
       </main>
     </div>
 </template>
 
 <script setup>
   const {data: jobs} = useFetch('/api/work')
-  console.log(jobs.value)
-
 </script>
 
 <style lang="scss" scoped>
@@ -40,11 +39,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 120px;
+      margin-bottom: $margin-section;
+
+      @include onMobile {
+        margin-bottom: $margin-section-mobile;
+      }
 
       &::before {
         @include decorLine;
-        top: 100px;
+        top: 0;
+
+        @include onMobile {
+          top: 60px;
+        }
       }
     }
 
@@ -52,9 +59,6 @@
       color: #fff;
       margin-bottom: 10px;
       text-align: center;
-      line-height: 1em;
-      font-size: 60px;
-      font-weight: 700;
     }
 
     &__nav {
@@ -84,7 +88,7 @@
     display: flex;
     flex-direction: column;
     gap: 80px; 
-    margin-bottom: 120px;
+    margin-bottom: $margin-section;
   }
 
   .router-link-exact-active {

@@ -20,10 +20,18 @@
 <style lang="scss" scoped>
     .resident {
       padding-top: 60px;
+
+      @include onMobile {
+        padding-top: 20px;
+      }
       
       &::before {
         @include decorLine;
         top: 90px;
+        
+        @include onMobile {
+          top: 66px;
+        }
       }
 
       &__country {

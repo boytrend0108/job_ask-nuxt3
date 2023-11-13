@@ -1,7 +1,7 @@
 <template>
   <div>
      <form class="form" ref="form" @submit.prevent="sendData">
-      <h2 class="form__titlse">Записаться на бесплатную консультацию</h2>
+      <h2 class="form__title">Записаться на бесплатную консультацию</h2>
       <p class="form__notes">Если у вас остались вопросы или вы желаете получить услугу - заполните форму ниже и наш менеджер свяжется с вами</p>
       <input 
         type="text" 
@@ -60,7 +60,7 @@ const sendData = ({target:form}) => {
 <style lang="scss" scoped>
   .form {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 650px;
     display: flex;
     gap: 30px;
     align-items: center;
@@ -68,8 +68,13 @@ const sendData = ({target:form}) => {
     flex-direction: column;
     background: #e0e0e0;
     padding: 60px;
+    box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 4px 4px 8px 0 rgba(34,60,80,.2);
+
+    @include onMobile {
+      padding: 30px;
+    }
 
     &__input, 
     &__textarea {
@@ -86,6 +91,19 @@ const sendData = ({target:form}) => {
       &:focus {
         outline: 1px solid $color-active;
       }
+
+      @include placeholder {
+        color: #aaa;
+        opacity: 1;
+        transition: all ease-in $transition-duration;
+      }
+      
+      &:focus {
+        @include placeholder {
+          opacity: 0;
+          transform: translateX(-50px)
+        }
+      }
     }
 
     &__textarea {
@@ -99,6 +117,10 @@ const sendData = ({target:form}) => {
 
     &__btn {
       align-self: flex-start;
+
+      @include onMobile {
+        width: 100%;
+      }
     }
   }
 </style>
