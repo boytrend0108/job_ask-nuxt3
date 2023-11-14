@@ -112,6 +112,7 @@
       left: 0;
       background-color: #0c1a3c;
       width: 150px;
+      z-index: 1;
     }
 
     &__drop-item {

@@ -48,10 +48,6 @@
       &::before {
         @include decorLine;
         top: 0;
-
-        @include onMobile {
-          top: 60px;
-        }
       }
     }
 
@@ -94,4 +90,6 @@
   .router-link-exact-active {
     color: $color-active;
   }
+
+  @include pageTransition;
 </style>

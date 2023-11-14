@@ -27,10 +27,10 @@
       
       &::before {
         @include decorLine;
-        top: 90px;
+        top: 0;
         
         @include onMobile {
-          top: 66px;
+          top: 10px;
         }
       }
 
@@ -38,5 +38,7 @@
         margin-bottom: 60px;
       }
     }
+
+    @include pageTransition;
 
 </style>

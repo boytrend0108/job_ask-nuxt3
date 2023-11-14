@@ -4,7 +4,7 @@
       <div class="footer__top">
         <div class="footer__about">
           <h3 class="footer__title">О нас</h3>
-          <p class="fotter__text">
+          <p class="footer__text">
             Занимаемся оформлением виз в Европу,помогаем найти работу и сделать ВНЖ
           </p>
         </div>
@@ -48,7 +48,7 @@
 
       <div class="footer__copy">
         <p class="footer__copyright">© copyright 2023 by 
-          <NuxtLink to="/" class="footer__copylink">jobask.ru</NuxtLink>
+          <NuxtLink to="/#top" class="footer__copylink">jobask.ru</NuxtLink>
         </p>
       </div>
     </div>
@@ -94,7 +94,21 @@
       font-weight: bold;
       margin-bottom: 40px;
 
+      @include onMobile {
+        margin-bottom: 20px;
+      }
+
       &--search {
+        margin-left: 20px;
+
+        @include onMobile {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__text {
+      @include onMobile {
         margin-left: 20px;
       }
     }
@@ -122,6 +136,10 @@
       @each $icon in $icons {
         &--#{$icon} {
 
+          @include onMobile {
+            margin-left: 20px;
+          }
+
           &::before {
             content: url(~/assets/images/icons/#{$icon}.svg);
           }
@@ -131,6 +149,8 @@
           }
         }
       }
+
+
     }
 
     &__copyright {
@@ -138,7 +158,7 @@
       font-size: 16px;
       justify-content: center;
       display: flex;
-      padding-block: 30px;
+      padding-block: 32px;
       box-sizing: border-box;
       position: relative;
       color: #a6b3d0;

@@ -8,6 +8,8 @@ export default defineEventHandler((event) => {
         'Среди посткоммунистических стран-членов ЕС, выше, чем в Словакия показатель ВВП на душу населения имеет только Словения, Чехия и Эстония.',
       ], 
       img: 'slovakii.webp',
+      img_mob: 'slovakii-mob.webp',
+      img_tab: 'slovakii-tab.webp',
       price: 3550,
     },
     {
@@ -18,6 +20,8 @@ export default defineEventHandler((event) => {
         'Безупречное европейское законодательство стоит на страже Ваших прав и интересов.',
       ], 
       img: 'cheh.webp',
+      img_mob: 'cheh-mob.webp',
+      img_tab: 'cheh-tab.webp',
       price: 3700,
     }
   ]

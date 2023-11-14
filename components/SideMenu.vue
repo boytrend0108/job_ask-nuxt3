@@ -82,6 +82,8 @@
   &__link {
     color: #fff;
     padding: 20px;
+    width: fit-content;
+    @include underlineOnHover;
 
     &--vng {
       position: relative;
@@ -120,6 +122,10 @@
 
   &__country {
     color:#fff;
+    width: fit-content;
+ 
+   @include underlineOnHover;
+
   }
 }
 

@@ -10,13 +10,17 @@
         {{ p }}
      </p>
     <div class="country__img-wr">
-      <img
-        :src="country.img"
-        alt="Словакия"
-        width="800"
-        height="600"
-        class="country__img"
-      >
+      <picture>
+        <source media="(max-width: 500px)" :srcset="country.img_mob">
+        <source media="(max-width: 768px)" :srcset="country.img_tab">
+        <img
+          :src="country.img"
+          alt="Словакия"
+          width="800"
+          height="600"
+          class="country__img"
+        >
+      </picture>
     </div>
     <ul class="country__documents">Необходимые документы:
       <li class="country__document">Ксерокопия загранпаспорта.</li>
@@ -54,14 +58,27 @@
     &__img-wr {
       overflow: hidden;
       width: 100%;
-      margin-bottom: 20px;
+      height: 600px;
       border-radius: 10px;
+      margin-bottom: 40px;
+
+      @include onLaptop {
+        height: 400px;
+      }
+      @include onTablet {
+        height: 300px;
+      }
+      @include onMobile {
+        height: 250px;
+      }
     }
 
     &__img {
       width: 100%;
-      height: 80%;
-      @include hover(transform , scale($transform-scale))
+      height: 100%;
+      @include hover(transform , scale($transform-scale));
+      object-fit: cover;
+      object-position: center;
     }
 
     &__documents {

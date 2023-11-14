@@ -1,5 +1,19 @@
-@mixin test {
-  color: red;
+@mixin underlineOnHover {
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: #fff;
+    position: relative;
+    top: 27px;
+    left: 0;
+    transition: width ease-in $transition-duration;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
 }
 
 @mixin hover ($property, $value) {
@@ -83,5 +97,17 @@
 @mixin onMobile {
   @media (max-width: 500px) {
     @content;
+  }
+}
+
+@mixin pageTransition{
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.3s;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
   }
 }

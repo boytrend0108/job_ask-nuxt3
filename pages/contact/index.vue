@@ -62,7 +62,7 @@
         top: 0;
 
         @include onMobile {
-          top: 60px;
+          top: 10px;
         }
       }
     }
@@ -85,15 +85,15 @@
       $width: clamp(490px, 50%, 700px);
       background-color: $color-active;
       display: flex;
-      gap: 20px;
+      gap: 15px;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 20px;
       box-sizing: border-box;
       width: $width;
       margin: 0 auto;
       position: absolute;
-      top: -220px;
+      top: -210px;
       left: calc(50% - ($width / 2));
 
       @include onMobile {
@@ -109,8 +109,10 @@
       color: #fff;
       font-size: inherit;
       position: relative;
-      display: block;
-      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
       min-width: 100px;
       width: 100%;
       
@@ -125,8 +127,8 @@
 
       &::before {
         display: block;
-        position: absolute;
-        left: 0px;
+        position: relative;
+        left: -10px;
       }
 
       $icons: 'whatsApp', 'email', "telegram";
@@ -154,5 +156,7 @@
     }
 
   }
+
+  @include pageTransition;
 
 </style>

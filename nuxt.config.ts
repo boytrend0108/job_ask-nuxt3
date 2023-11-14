@@ -13,7 +13,10 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com'},
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap'},
       ]
-    }
+    },
+
+    pageTransition: { name: 'page', mode: 'out-in' }
+
   },
 
   css: [

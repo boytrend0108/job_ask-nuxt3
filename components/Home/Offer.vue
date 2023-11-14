@@ -53,6 +53,9 @@
      0px 6px 47px -6px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 6px 47px -6px rgba(0,0,0,0.75);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all ease-in 0.5s;
 
     @include onLaptop {
       grid-template-columns: repeat(2, 1fr);
@@ -143,7 +146,10 @@
    
     &__contact {
       background-color: $color-active;
-      padding: 60px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       @include onTablet {
         padding: 20px;

@@ -35,6 +35,20 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 20px;
+    margin-bottom: $margin-section;
+    padding-top: $margin-section;
+
+    @include onLaptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include onMobile {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: $margin-section-mobile;
+      padding-top: $margin-section-mobile;
+    }
   }
   
   .container {
@@ -49,5 +63,7 @@
     position: absolute;
     width: 84%;
   }
+
+  @include pageTransition;
 
 </style>
