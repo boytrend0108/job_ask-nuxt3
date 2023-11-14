@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
  .first-screen {
    height: 570px;
-   background-image: url(~/assets/images/home/inner-banner-bg.webp);
+   background-image: url(~/public/assets/images/home/inner-banner-bg.webp);
    display: flex;
    justify-content: center;
    align-items: center;

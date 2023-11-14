@@ -10,7 +10,7 @@ export const intesectionUtil = (animation) => {
     threshold: 0.1,
   };
 
-  debugger
+
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

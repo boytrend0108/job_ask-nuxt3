@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "nuxt generate && gh-pages --dotfiles -d .output/public"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -23,6 +24,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@studio-freight/lenis": "^1.0.27",
+    "gh-pages": "^6.0.0",
+    "path": "^0.12.7",
+    "serve": "^14.2.1",
     "smoothscroll-for-websites": "^1.4.10",
     "typed.js": "^2.1.0",
     "vue-typed-js": "^0.1.2"

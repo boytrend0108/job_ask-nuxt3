@@ -47,7 +47,7 @@
   .contact {
     &__header {
       padding-block: 120px;
-      background-image: url(~/assets/images/home/inner-banner-bg.webp);
+      background-image: url(~/public/assets/images/home/inner-banner-bg.webp);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -137,11 +137,11 @@
         &--#{$icon} {
 
           &::before {
-            content: url(~/assets/images/icons/#{$icon}-hover.svg);
+            content: url(~/public/assets/images/icons/#{$icon}-hover.svg);
           }
 
           &:hover::before {
-            content: url(~/assets/images/icons/#{$icon}-hover.svg);
+            content: url(~/public/assets/images/icons/#{$icon}-hover.svg);
           }
         }
       }
