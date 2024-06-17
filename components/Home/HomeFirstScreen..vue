@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-  import typeMessage from '~/plugins/typed'
+  import typeMessage from '~/plugins/typed.js'
 
   const message = ref('')
   const words = ['Ждёт ', 'Hанимает ']

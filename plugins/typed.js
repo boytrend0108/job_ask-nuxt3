@@ -54,10 +54,4 @@ const typeMessage = (words, elem) => {
   typeLine();
 };
 
-export default defineNuxtPlugin((nuxtApp) => {
-  return {
-    provide: {
-      typeMessage,
-    },
-  };
-});
+export default typeMessage;
