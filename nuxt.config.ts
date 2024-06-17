@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },  
+  devtools: { enabled: true },
   app: {
+    baseURL: '/job_ask-nuxt3/',
     head: {
       title: 'JobAsk',
       meta: [
@@ -8,9 +9,9 @@ export default defineNuxtConfig({
 
       ],
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com'},
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com'},
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap'},
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap' },
       ]
     },
 
@@ -19,8 +20,8 @@ export default defineNuxtConfig({
   },
 
   css: [
-    './public/assets/styles/main.scss',
-    './public/assets/styles/_normalize.scss',
+    'public/assets/styles/main.scss',
+    'public/assets/styles/_normalize.scss',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
@@ -32,6 +33,5 @@ export default defineNuxtConfig({
         }
       }
     }
-  }, 
-
+  },
 })
