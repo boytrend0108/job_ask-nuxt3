@@ -1,0 +1,31 @@
+h1 {
+  font-size: 80px;
+  line-height: 1em;
+  letter-spacing: -.02em;
+  font-weight: 700;
+
+  @include onTablet {
+    font-size: 60px;
+    line-height: initial;
+  }
+
+  @include onMobile {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 1em;
+  letter-spacing: -.02em;
+  font-weight: 700;
+
+  @include onTablet {
+    font-size: 40px;
+    line-height: initial;
+  }
+
+  @include onMobile {
+    font-size: 30px;
+  }
+}
