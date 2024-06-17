@@ -98,7 +98,7 @@
       position: relative;
 
       &::before {
-        content: url(../../assets/images/icons/menu-active-star.png);
+        content: url(/assets/images/icons/menu-active-star.png);
         display: block;
         position: absolute;
         top: 3px;

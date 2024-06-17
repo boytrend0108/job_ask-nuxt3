@@ -91,7 +91,7 @@
       padding-left: 30px;
 
       &::before {
-        content: url(~/public/assets/images/icons/menu-active-star.png);
+        content: url(/assets/images/icons/menu-active-star.png);
         position: relative;
         left: -10px;
       }

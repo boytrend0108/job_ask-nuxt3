@@ -4,7 +4,7 @@
       <NuxtLink to="/">
         <img
           class="logo header__logo"
-          src="../public/assets/images/logo-ja-dark.webp"
+          src="/assets/images/logo-ja-dark.webp"
           alt="logo"
           width="60"
           height="30"
@@ -112,11 +112,11 @@
       padding: 50px;
       border: none;
       background-color: transparent;
-      background-image: url(~/public/assets/images/icons/icon-burger-menu.svg);
+      background-image: url(/assets/images/icons/icon-burger-menu.svg);
       background-repeat: no-repeat;
       background-position: center;
       
-      @include hover(background-image, url(~/public/assets/images/icons/icon-burger-menu-hover.svg));
+      @include hover(background-image, url(/assets/images/icons/icon-burger-menu-hover.svg));
 
       @include onMobile {
         padding: 30px;

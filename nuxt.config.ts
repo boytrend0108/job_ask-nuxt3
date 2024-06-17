@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
-    baseURL: '/job_ask-nuxt3/',
     head: {
       title: 'JobAsk',
       meta: [
@@ -20,12 +19,13 @@ export default defineNuxtConfig({
   },
 
   css: [
-    'public/assets/styles/main.scss',
-    'public/assets/styles/_normalize.scss',
+    './public/assets/styles/main.scss',
+    './public/assets/styles/_normalize.scss',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   vite: {
+
     css: {
       preprocessorOptions: {
         scss: {
@@ -34,4 +34,5 @@ export default defineNuxtConfig({
       }
     }
   },
+
 })

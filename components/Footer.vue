@@ -61,7 +61,7 @@
 
 <style lang="scss" scoped>
   .footer {
-    background-image: url(~/public/assets/images/home/footer-bg.webp);
+    background-image: url(/assets/images/home/footer-bg.webp);
     padding-top: $margin-section;
     position: relative;
 
@@ -141,11 +141,11 @@
           }
 
           &::before {
-            content: url(~/public/assets/images/icons/#{$icon}.svg);
+            content: url(/assets/images/icons/#{$icon}.svg);
           }
 
           &:hover::before {
-            content: url(~/public/assets/images/icons/#{$icon}-hover.svg);
+            content: url(/assets/images/icons/#{$icon}-hover.svg);
           }
         }
       }

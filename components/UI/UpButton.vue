@@ -31,7 +31,7 @@
     @include hover (background-color, #0c1a3c);
 
     &::after {
-      content: url(~/public/assets/images/icons/arrow-up.svg);
+      content: url(/assets/images/icons/arrow-up.svg);
       padding-top: 4px;
     }
   }
