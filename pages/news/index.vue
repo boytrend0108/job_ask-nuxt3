@@ -1,6 +1,7 @@
 <template>
     <div class="container">
       <p v-if="error" class="error">Упсс... что-то пошло не так</p>
+      <p class="error">Sorry, this page is under development</p>
 
       <div class="preloader" v-if="pending">
         <UIPreloader class="preloader__item"/>

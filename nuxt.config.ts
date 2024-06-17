@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },  
   app: {
-    baseURL: '',
     head: {
       title: 'JobAsk',
       meta: [

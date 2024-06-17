@@ -2,7 +2,7 @@
   <article class="job-offer">
     <div class="job-offer__img-wr">
       <img
-        :src="job.img"
+        :src="`./work/${job.img}`"
         alt="Работа на заводе"
         class="job-offer__img"
         width="200"

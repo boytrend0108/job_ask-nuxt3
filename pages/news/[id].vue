@@ -1,5 +1,7 @@
 <template>
   <div>
+    <p class="error">Sorry, this page is under development</p>
+
     <Head>
       <Title>Новость дня</Title>
       <Meta name="description" :content="news.description"/>
