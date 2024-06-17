@@ -1,34 +1,31 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - master
-permissions:
-  contents: write
+      - master # This will trigger the workflow on push to the 'main' branch
+
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+  build-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
+
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
 
-      - name: Install & Generate 🔧
-        run: |
-          npm install
-          npm run generate
-        env:
-          NUXT_BASE_URL: ${{ vars.NUXT_BASE_URL  }}
+      - name: Install dependencies
+        run: npm install
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Build project
+        run: npm run generate
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
