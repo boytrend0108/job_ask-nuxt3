@@ -24,7 +24,7 @@ jobs:
       - name: Install & Generate 🔧
         run: |
           npm install
-          npm run generate
+          node .output/server/index.mjs
         env:
           NUXT_BASE_URL: ${{ vars.NUXT_BASE_URL  }}
 
