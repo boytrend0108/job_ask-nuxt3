@@ -16,11 +16,11 @@
 
 - [Link to the preview](https://job-ask-prod.netlify.app/)
 
-- No mackup.
+- No mockup.
 
 ### Getting Started
 
-1.Clone the repository:
+1. Clone the repository:
 
 ```bash
  https://github.com/boytrend0108/job_ask-nuxt3
