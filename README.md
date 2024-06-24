@@ -8,9 +8,9 @@
 
 - Front-end: Nuxt, SCSS.
 
-![App Screenshot](https://github.com/boytrend0108/afg_pern/blob/main/screenshots/home.png?raw=true)
+![App Screenshot](https://github.com/boytrend0108/job_ask-nuxt3/blob/master/screenshots/Screenshot_1.png?raw=true)
 
-![App Screenshot](https://github.com/boytrend0108/afg_pern/blob/main/screenshots/swagger.png?raw=true)
+![App Screenshot](https://github.com/boytrend0108/job_ask-nuxt3/blob/master/screenshots/Screenshot_2.png?raw=true)
 
 ## Demo
 
