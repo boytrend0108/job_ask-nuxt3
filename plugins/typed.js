@@ -13,6 +13,7 @@ const typeMessage = (words, elem) => {
 
       if (count === words[line].length) {
         line++;
+
         if (line !== words.length) {
           clearTimeout(interval);
           typeBack();

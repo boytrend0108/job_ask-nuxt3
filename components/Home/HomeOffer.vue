@@ -34,7 +34,9 @@
 
       <p class="offer__text">Именно поэтому собрали всю информацию косательно виз в одном месте</p>
 
-      <UIWhiteButton class="offer__btn">Узнать больше</UIWhiteButton>
+     <NuxtLink to="/contact">
+       <UIWhiteButton class="offer__btn">Узнать больше</UIWhiteButton>
+     </NuxtLink>
     </div>
   </article>
 </template>

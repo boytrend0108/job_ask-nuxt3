@@ -31,6 +31,7 @@
       &:hover {
         background-color: $color-active;
         color: #fff;
+        border-radius: 0;
       }
    }
 
